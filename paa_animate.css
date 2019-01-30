@@ -4,8 +4,8 @@
    Case Problem 3
 
    Pixal Arts and Entertainment Animation Styles
-   Author: 
-   Date:   
+   Author: Ryan Burkhart
+   Date: 1-30-19  
 
    Filename: 
    
@@ -20,9 +20,25 @@
 
 
 /* Transition Effects */
+nav#gameLinks a {
+    position: relative;
+    color: white;
+    font-size: 0.5s;
+}
 
+nav#gameLinks a:hover {
+    color: rgb(255, 194, 99);
+}
 
-
+nav#gameLinks a::after {
+    content: "empty";
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 0px;
+    width: 0%;
+    height: 8px;
+    background: linear-gradient()
+}
 
 /* Sprite Styles */
 
