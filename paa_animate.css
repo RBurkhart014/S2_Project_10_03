@@ -43,24 +43,78 @@ nav#gameLinks a::after {
     transition: opacity 0.5s, width 0.5s;
 }
 
+/* These past 3 style rules made it so therefore the text in the center of the page and the bars under them appear correctly, and the bars have a gradient and only appear when hovered over */
+
 nav#gameLinks a:hover::after {
     opacity: 1;
     width: 100%;
 }
-
+/* Made them a LITTLE transparent */
 
 /* Sprite Styles */
 div.sprite {
     position: absolute;
 }
 
+/* Made the animation appearence different */
+
 div#bat {
     width: 40px;
     height: 50px;
     top: 100px;
     left: -50px;
+    background: url(paa_bat.png) left center/ cover no-repeat;
+    animation: playSprite 2.000s steps(39) infinite, flyRight 8.000s linear infinite;
 }
 
+div#butterfly {
+    width: 35px;
+    height: 35px;
+    top: 60px;
+    left: -50px;
+    background: url(paa_bfly.png) left center/ cover no-repeat;
+    animation: playSprite 3s 1s steps(33), flyRight 6s cubic-bezier(0,1,0.73,0) infinite;
+}
+
+div#fox {
+    width: 280px;
+    height: 260px;
+    bottom: 10px;
+    right: 10px;
+    background: url(paa_fox.png) left center/ cover no-repeat;
+    animation: playSprite 3.500s 4.000s steps(27) infinite;
+}
+
+/* These div id's made it so the fox bat and butterfly on the image are animated to move in certain seconds and do different gestures */
 
 /* Animation Styles */
+@keyframes playSprite {
+    100% {
+        background-position: right center;
+    }
+}
 
+@keyframes flyRight {
+    25% {
+        top: 150px;
+    }
+
+    50% {
+        top: 55px;
+    }
+
+    65% {
+        top: 120px;
+    }
+
+    90% {
+        top: 50px;
+    }
+
+    100% {
+        top: 80px;
+        left: 100%;
+    }
+}
+
+/* These changed the positions of the animation locations and their role */
